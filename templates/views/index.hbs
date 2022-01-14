@@ -1,0 +1,36 @@
+{{!-- handlebars  --}}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather</title>
+    {{>icon}}
+    <link rel="stylesheet" href="./css/styles.css"> 
+    
+    
+</head>
+
+<body>  
+    <div class="main-content">
+         {{>header}}
+         <p>Use this side to get your weather</p>
+
+         <form>
+             <input placeholder="Location">
+             <button>Seach</button>
+         </form>
+
+         <p id="message-1"></p>
+         <p id="message-2"></p>
+
+    </div>
+   
+    {{>footer}}
+    <script src="js/app.js"></script> 
+     {{!-- script will run after by putting here  --}}
+</body>
+
+
+</html>
+

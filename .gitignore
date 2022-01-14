@@ -1,0 +1,2 @@
+node_modules/
+# git needs to ignore node_modules 

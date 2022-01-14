@@ -1,0 +1,51 @@
+body {
+    color: #333333;
+    font-family: arial;
+     max-width: 650px; /* how wide content will be */
+     margin: 0 auto; 
+     padding: 0 16px; 
+
+     display: flex; 
+     flex-direction: column;/*row or collum */
+     min-height: 100vh;  /* vh = viewpoint height*/
+}
+.main-content{
+    flex-grow: 1; /*put them at the end of the page*/
+}
+footer {
+    color: #888888;
+    padding: 16px 0;
+    margin-top: 16px;
+    border-top: 2px solid #eeeeee;
+}
+
+header{
+    margin-top:16px;
+    margin-bottom: 48px;
+}
+
+h1 {
+     font: 64px;
+     margin-bottom: 16px;
+   
+}
+header a {            /* target link inside Header*/
+    color: #888888;
+    margin-right: 16px;
+    text-decoration: none;    /*emove underline on the link (Weather, about, help) */
+}
+.portrait {
+    width: 500px;
+} 
+
+input{
+    border: 1px solid #cccccc;
+    padding: 8px;
+}
+button{
+    cursor:pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color: white;
+    padding: 8px;
+}
