@@ -1,4 +1,4 @@
-console.log("Client sidee JavaScript is loaded!");
+// console.log("Client sidee JavaScript is loaded!");
 
 //Fetch API is not part of JavaScript but it is a brower based API,
 //its something we can use in all modern browers but not accessable in node js
