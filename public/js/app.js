@@ -26,7 +26,7 @@ weatherForm.addEventListener('submit',(e)=>{
     messageTwo.textContent = ''
    
 
-fetch("http://localhost:3000/weather?address="+ location )  //whateve value store in location above
+fetch("/weather?address="+ location )  //whateve value store in location above
      .then((response) => {
       response.json().then((data)=>{
    if (data.error) {

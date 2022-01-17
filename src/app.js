@@ -9,7 +9,9 @@ const forecast = require("./utils/forecast");
 //console.log(path.join(__dirname, '../public/about-page.html'))
 
 const app = express(); //express function doesnt take argument
+const port = process.env.PORT || 3000 //this will be set to heroku 
 // define path for express config
+
 const publicDirectoryPath = path.join(__dirname, "../public");
 const viewPath = path.join(__dirname, "../templates/views");
 const pattialPath = path.join(__dirname, "../templates/partials");
@@ -129,10 +131,10 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   //port 3000
-  console.log("Server is out on port 3000.");
-});
+  console.log("Server is out on port" + port);
+});   //fixing port issue 
 
 //!!! always control + C  => to stop the server running
 // nodemon src/app.js    =>> no need to keep running the command when something change, but can refesh the page
