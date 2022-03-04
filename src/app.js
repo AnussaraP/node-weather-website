@@ -4,9 +4,6 @@ const hbs = require("hbs");
 const geocode = require("./utils/geocode");
 const forecast = require("./utils/forecast");
 
-// console.log(__dirname)   //directory name => these to get part to public folder
-// console.log(__filename) //these will provide the part to the file itself.
-//console.log(path.join(__dirname, '../public/about-page.html'))
 
 const app = express(); //express function doesnt take argument
 const port = process.env.PORT || 3000 //this will be set to heroku 
@@ -42,12 +39,6 @@ app.get("/about", (req, res) => {
   });
 });
 
-// app.get('', (req,res)=>{         //get() method take 2 argument, req=requesrt , res=response
-//     const name = "Weather"
-//     res.send('<h1> '+name+' </h1>')  //send back HTML
-
-// })
-
 app.get("/help", (req, res) => {
   res.render("help", {
     title: "Please contact us for more information",
@@ -56,13 +47,7 @@ app.get("/help", (req, res) => {
     name,
   });
 });
-//     res.send([{              //send back JSON      ({ object,object })  or ([{ array},{ array }])
-//         name: 'Sara',
-//         age:27
-//     },{ name: 'Lewis',
-//     age: 25
-//     }
-// ]
+
 
 app.get("/weather", (req, res) => {
   //this is JSON data use  res.send instead of res.get
@@ -134,10 +119,4 @@ app.get("*", (req, res) => {
 app.listen(port, () => {
   //port 3000
   console.log("Server is out on port" + port);
-});   //fixing port issue 
-
-//!!! always control + C  => to stop the server running
-// nodemon src/app.js    =>> no need to keep running the command when something change, but can refesh the page
-
-// "start": "node src/app.js",
-// "start:dev": "nodemon src/app.js",
+});   
